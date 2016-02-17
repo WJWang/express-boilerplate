@@ -1,2 +1,2 @@
 # express-boilerplate
-boilerplate for exprss api service with usually libs setting
+boilerplate for express api service with common libs setting

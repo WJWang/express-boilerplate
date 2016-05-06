@@ -1,7 +1,9 @@
-import express from 'express';
-import Debug from 'debug';
-import Promise from 'bluebird';
-import _ from 'lodash';
+import {
+  express,
+  debug as Debug,
+  Promise,
+  _
+} from '../libs/Utils';
 
 const debug = Debug('Boilerplate:Route-Public');
 const router = express.Router();

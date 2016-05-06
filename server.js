@@ -1,14 +1,19 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import Debug from 'debug';
-import morgan from 'morgan';
-import fs from 'fs';
-import _ from 'lodash';
-import cors from 'cors';
+import {
+  express,
+  async,
+  cors,
+  debug as Debug,
+  bodyParser,
+  morgan,
+  fs
+} from './libs/Utils';
+
 import Route from './libs/Route';
+
 const debug = Debug('Test:Server');
 const PORT = process.env.PORT || 8080;
 const app = express();
+
 
 // Middlewares
 app.use(bodyParser.urlencoded({

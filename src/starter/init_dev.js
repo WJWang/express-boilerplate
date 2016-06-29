@@ -1,4 +1,3 @@
-require("babel-polyfill");
 import config from '../../config/config.js';
 import { createServer } from 'http';
 const debug = require('debug')('express-boilerplate:server');

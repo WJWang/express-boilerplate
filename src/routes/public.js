@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({
-    request : req.body,
+    message : "Hi, There",
     status : "success"
   });
 });

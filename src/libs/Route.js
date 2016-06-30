@@ -1,10 +1,10 @@
-let routes = [
-  {
-    path : '/public',
-    file : require('../routes/public')
-  }
-];
+import publicRoute from '../routes/public';
 
-module.exports = function (app) {
+const routes = [{
+  path: '/public',
+  file: publicRoute,
+}];
+
+export default function (app) {
   routes.forEach((router) => app.use(router.path, router.file));
-};
+}

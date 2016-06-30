@@ -1,17 +1,22 @@
-import { express, cors, debug as Debug, bodyParser, morgan as logger } from './libs/Utils';
-import Route from './libs/Route';
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import logger from 'morgan';
+
+import routesBinder from './libs/Route';
+
 
 const app = express();
 
 // Middlewares
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // cors
-app.use(cors({origin: '*' }));
+app.use(cors({ origin: '*' }));
 
 // Bind Routes
-Route(app);
+routesBinder(app);
 
 module.exports = app;

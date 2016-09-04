@@ -11,7 +11,7 @@ function doSomethingAsync() {
       setTimeout(() => {
         debug('After 3 secs');
         resolve('After 3 secs');
-      }, 3000);
+      }, 10);
     } catch (e) {
       reject(e);
     }

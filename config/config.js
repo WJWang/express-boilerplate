@@ -3,6 +3,7 @@ export const express = {
   ssl: process.env.HTTPS_PORT || 9999
 };
 
+
 export const database = {
   port: process.env.DB_PORT,
   name: process.env.DB_NAME,
@@ -10,7 +11,7 @@ export const database = {
   account: process.env.DB_ACCOUNT
 };
 
-export default {
-  express,
-  database,
-};
+// export default {
+//   express,
+//   database,
+// };

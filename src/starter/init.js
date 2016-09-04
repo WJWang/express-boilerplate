@@ -1,5 +1,4 @@
-require("babel-polyfill");
-import config from '../../config/config.js';
+import { express } from '../../config/config.js';
 import { createServer } from 'http';
 const debug = require('debug')('express-boilerplate:server');
 import app from '../server.js';
@@ -20,7 +19,7 @@ function normalizePort(val) {
   return false;
 }
 
-const port = normalizePort(config.express.port);
+const port = normalizePort(express.port);
 app.set('port', port);
 
 function onError(error) {

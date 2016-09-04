@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import Errors from '../../errors/';
+
 const debug = require('debug')('express-boilerplate:public');
 const router = new Router();
 
@@ -16,20 +18,14 @@ function doSomethingAsync() {
   });
 }
 
-router.get('/', (req, res) => {
-  async function asyncTest() {
-    await doSomethingAsync();
-    return 'After doSomethingAsync executed';
-  }
 
-  asyncTest()
-    .then((data) => {
-      res.json({
-        message: data,
-        status: 'success',
-      });
-    })
-    .catch((err) => res.status(400).json(err));
+router.get('/', async (req, res) => {
+  const data = await doSomethingAsync();
+  res.json({
+    message: data,
+    status: 'success',
+    error: new Errors.General.Parameter('test'),
+  });
 });
 
-module.exports = router;
+export default router;

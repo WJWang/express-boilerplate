@@ -32,9 +32,9 @@ function Permission(data) {
 
 util.inherits(Permission, Error);
 
-module.exports = {
-  NotMatch: NotMatch,
-  ExpiredToken: ExpiredToken,
-  AccountExisted: AccountExisted,
-  Permission: Permission
+export default {
+  NotMatch,
+  ExpiredToken,
+  AccountExisted,
+  Permission,
 };

@@ -5,6 +5,6 @@ const routes = [{
   file: publicRoute,
 }];
 
-export default function (app) {
+export default (app) => {
   routes.forEach((router) => app.use(router.path, router.file));
-}
+};

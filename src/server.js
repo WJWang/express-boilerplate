@@ -22,4 +22,4 @@ app.use((req, res, next) => ((req.method === 'OPTIONS') ? res.status(204).end() 
 // Bind Routes
 routesBinder(app);
 
-module.exports = app;
+export default app;

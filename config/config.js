@@ -10,8 +10,3 @@ export const database = {
   password: process.env.DB_PASSWORD,
   account: process.env.DB_ACCOUNT
 };
-
-// export default {
-//   express,
-//   database,
-// };
